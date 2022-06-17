@@ -29,6 +29,15 @@ button {
     font-family: sans-serif;
 }
 
+.fixed-header {
+    position: fixed; /*deja que el menú se quede fijo aunque se despliegue la página*/
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fffbf7;
+  }
+  
+
 li{
     display: inline;
     margin: 0 25px 0;
@@ -52,7 +61,7 @@ li{
 }
 
 .navbar {
-    width: 70%;
+    width: 60%;
     text-align: left;  /*alinea el texto a la derecha*/
     color: #025157;
     font-weight: 500; /*tamaño de la letra*/
@@ -82,7 +91,58 @@ li{
 }
 
 .main {
-    margin-top: 140px;
+    margin-top: 285px;
     text-align: center; /*centra todo lo que contiene el main*/
 }
 
+.publish {
+    /* container styles if any */
+    margin-left: 30px;
+  }
+  
+  .publish h3 {
+    font-family: "Alegreya", serif; /*cambia la fuente de la letra*/
+    font-size: 40px;
+    line-height: 48px;
+    color: #025157;
+  }
+  
+  .publish > p {
+    font-size: 16px;
+    color: #343434;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .publish > form {
+    display: flex;
+  }
+  
+  .publish > form p {
+    color: #025157;
+    margin-right: 18px;
+  }
+  
+
+.promo {
+    display: flex; /*crea columnas*/
+    width: 70%;
+    margin: 100px auto;
+    align-items: center;
+}
+
+iframe {
+    display: flex;
+    margin: auto;
+}
+
+.explanatory-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .explanatory-video img {
+    width: 120px;
+    margin-top: 10px;
+  }
