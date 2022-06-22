@@ -11,7 +11,7 @@ p{
     color: #8b8b8bcc;
     /*text-align: center;*/
     font-family: Verdana;
-    font-size: 20px;
+    font-size: 20px; /*tamaño*/
 }
 
 button {
@@ -69,7 +69,7 @@ li{
 
 .actions {
     width: 15%;
-    text-align: right;
+    text-align: right; /*pone el texto hacia la derecha*/
     font-size: 14px;
     font-weight: 600;
 }
@@ -120,7 +120,7 @@ li{
   
   .publish > form p {
     color: #025157;
-    margin-right: 18px;
+    margin-right: 18px; /*un margen de 18 píxeles*/
   }
   
 
@@ -128,7 +128,7 @@ li{
     display: flex; /*crea columnas*/
     width: 70%;
     margin: 100px auto;
-    align-items: center;
+    align-items: center; /*lo pone en medio*/
 }
 
 iframe {
@@ -139,10 +139,84 @@ iframe {
 .explanatory-video {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /*pone en medio el video*/
   }
   
   .explanatory-video img {
     width: 120px;
     margin-top: 10px;
+  }
+
+/*para darle diseño a cuatro columnas, ponerles imágenes, color de fondo, margenes, links a otros sitios, etc*/
+  .features {
+    display: grid;/*ayuda a trabajar en cuadrículas*/
+    /*grid-template-columns: repeat(3, 1fr); grid va a contener 3 columnas del mismo ancho relativo al espacio disponible en la pantalla.*/
+    /*grid-template-columns: 300px 300px; cada columna va a tener un espacio de 300 píxeles*/
+    /*son 2 columnas por eso van dos veces el 300px, si fueran 4 columnas se repite 4 veces los 300px*/
+    /*grid-template-columns: repeat(2, 1fr);*/
+    /*height: 660px; le da espacio a cada columna de 330px*/
+    /*grid-template-rows: repeat(2, 1fr);*/
+    /*Regresa la cantidad de columnas a las que realmente necesitamos (2) y agrega la cantidad de filas que usaremos (2) teniendo en cuenta que el alto será de 330px. Una vez logrado*/
+    /*grid-template: repeat(2, 1fr) / repeat(2, 330px); obtiene el mismo resultado de las columnas y filas del grid usando la propiedad de atajo*/
+    background-color: #025157;
+    padding: 5% 10%;
+    grid-template: repeat(2, 330px) / repeat(2, 1fr);
+  }
+
+  .features .feature-card {
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .features .feature-card .feature-content {
+    padding: 30px 20px 40px 40px;
+    flex: 2;
+  }
+  
+  .features .feature-card .feature-content > * {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+  
+  .features .feature-card .feature-content img {
+    width: 50px;
+  }
+  
+  .features .feature-card .feature-content h3 {
+    font-size: 24px;
+    color: #343434;
+    font-weight: 400;
+  }
+  
+  .features .feature-card .feature-content p {
+    font-size: 16px;
+    color: #7e7e7e;
+    font-weight: 400;
+  }
+  
+  .features .feature-card .feature-content a {
+    font-size: 16px;
+    color: #67b54b;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .features .feature-card .feature-image {
+    flex: 1;
+    width: 40%;
+    position: relative;
+    right: -50px;
+    height: 80%;
+  }
+  
+  .features .feature-card .feature-image figure, .features .feature-card .feature-image img {
+    margin-top: 0;
+    height: 100%;
   }
