@@ -1,10 +1,46 @@
-body {
+
+ body {
     background-color: #fffbf7;
 }
 
 h1 {
     color: #025157;
     text-align: center;
+}
+
+/*se ajustó el tamaño de las imágenes*/
+.banner > img {
+  width: 100%;
+}
+
+.publish > form {/*lo metió a nivel de columna*/
+  flex-direction: column;
+}
+
+.publish > form > div {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.publish > form > div > input {
+  width: 65%;
+}
+
+.promo {
+  flex-direction: column; /*se acomoda en manera de columna*/
+  max-width: 98%; /*el espació máximo que ocupa*/
+}
+.explanatory-video { /*ajusta el tamaño del video*/
+  width: 100%;
+}
+
+.publish {
+  margin-top: 10px;
+}
+
+.publish > h3 {
+  font-size: 25px; /*hace el texto más pequeño*/
+  line-height: 1.2; /*hace el espacio más pequeño*/
 }
 
 p{
@@ -61,14 +97,14 @@ li{
 }
 
 .navbar {
-    width: 60%;
-    text-align: left;  /*alinea el texto a la derecha*/
+    /*width: 60%;*/
+    text-align: center;  /*alinea el texto en medio*/
     color: #025157;
     font-weight: 500; /*tamaño de la letra*/
 }
 
 .actions {
-    width: 15%;
+    /*width: 15%;*/
     text-align: right; /*pone el texto hacia la derecha*/
     font-size: 14px;
     font-weight: 600;
@@ -134,6 +170,8 @@ li{
 iframe {
     display: flex;
     margin: auto;
+    width: 560px;
+    height: 315px;
 }
 
 .explanatory-video {
@@ -149,12 +187,13 @@ iframe {
 
 /*para darle diseño a cuatro columnas, ponerles imágenes, color de fondo, margenes, links a otros sitios, etc*/
   .features {
+    margin-top: 5%;
     display: grid;/*ayuda a trabajar en cuadrículas*/
     /*grid-template-columns: repeat(3, 1fr); grid va a contener 3 columnas del mismo ancho relativo al espacio disponible en la pantalla.*/
     /*grid-template-columns: 300px 300px; cada columna va a tener un espacio de 300 píxeles*/
     /*son 2 columnas por eso van dos veces el 300px, si fueran 4 columnas se repite 4 veces los 300px*/
     /*grid-template-columns: repeat(2, 1fr);*/
-    /*height: 660px; le da espacio a cada columna de 330px*/
+    height: 660px; /*le da espacio a cada columna de 330px*/
     /*grid-template-rows: repeat(2, 1fr);*/
     /*Regresa la cantidad de columnas a las que realmente necesitamos (2) y agrega la cantidad de filas que usaremos (2) teniendo en cuenta que el alto será de 330px. Una vez logrado*/
     /*grid-template: repeat(2, 1fr) / repeat(2, 330px); obtiene el mismo resultado de las columnas y filas del grid usando la propiedad de atajo*/
@@ -220,3 +259,57 @@ iframe {
     margin-top: 0;
     height: 100%;
   }
+
+  /*Es para que las cuatro columnas se ajuste al tamaño del dispositivo móvil y se ven de forma vertical (en una sola línea)*/
+@media (max-width: 575px) {
+  /** Estilos de portada principal y sección de publicidad */
+  .features {
+    grid-template: repeat(4, 1fr) / 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .feature-image {
+    display: none;
+  }
+}
+
+  /*es para ajustar al tamaño del dispositivo*/
+  /*dispositivos móviles en vista viewport (vertical)*/
+  @media (max-width: 575px) {
+    /*.navbar, 
+    .actions{
+      display: none;
+    }*/
+
+    /* para que el título no quede tan seeparado del borde superior */
+    .main {
+      margin-top: 130px;
+    }
+
+  /*El título de nuestra página está tomando demasiado espacio, esto se debe a que tiene una fuente fija. Se necesita cambiar de fuente*/
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  /*dispositivos móviles en vista landscape (horizontal)*/
+  @media (min-width: 576px) and (max-width: 767px){
+
+  }
+
+  /** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/** dispositivos grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/** dispositivos extra grandes (monitores grandes, tvs) */
+@media (min-width: 1200px) {
+
+}
+
