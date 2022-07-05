@@ -490,4 +490,6 @@ iframe {
 
 }
 
-
+.texto-boton:hover {
+  background-color: #67b54b;
+}
