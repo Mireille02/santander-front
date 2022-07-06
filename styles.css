@@ -490,6 +490,7 @@ iframe {
 
 }
 
+/*para que el botón cambié de color más claro cuando el puntero del ratón este encima del botón*/
 .texto-boton:hover {
   background-color: #67b54b;
 }
